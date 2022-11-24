@@ -1,12 +1,25 @@
-// function signature
+// class signature
 
-let calculation: (x: number, y: number, z:string)=> number;
+class Player{
+    name:string;
+    age:number;
+    country: string;
+    
+     constructor(n:string, x:number, z:string){
+        this.name=n;
+        this.age = x;
+        this.country = z;
+    
+    }
 
-calculation =(a:number, b: number, c: string)=>{
-    if(c === "add"){
-        return a + b
-    }else{
-        return a - b
+    play(){
+        console.log(`${this.name} from ${this.country} is playing!`)
     }
 }
-console.log(calculation(9, 6, "add"))
+
+const islam = new Player('Islam', 28, 'Bangladesh')
+const afsana = new Player('Afsana', 24, 'Bangladesh')
+
+const players: Player[]=[];
+players.push(islam)
+players.push(afsana)

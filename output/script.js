@@ -1,12 +1,17 @@
 "use strict";
-// function signature
-let calculation;
-calculation = (a, b, c) => {
-    if (c === "add") {
-        return a + b;
+// class signature
+class Player {
+    constructor(n, x, z) {
+        this.name = n;
+        this.age = x;
+        this.country = z;
     }
-    else {
-        return a - b;
+    play() {
+        console.log(`${this.name} from ${this.country} is playing!`);
     }
-};
-console.log(calculation(9, 6, "add"));
+}
+const islam = new Player('Islam', 28, 'Bangladesh');
+const afsana = new Player('Afsana', 24, 'Bangladesh');
+const players = [];
+players.push(islam);
+players.push(afsana);
