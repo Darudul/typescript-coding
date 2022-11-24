@@ -1,15 +1,12 @@
-// Type Aliases
-type stringOrNumber= string | number;
-type userType = {name:string, age:number}
+// function signature
 
+let calculation: (x: number, y: number, z:string)=> number;
 
-const userDetails =(
-    id:stringOrNumber ,
-    user: userType
-)=>{
-    console.log(`user id is ${id}, name is ${user.name} and age is ${user.age}`)
+calculation =(a:number, b: number, c: string)=>{
+    if(c === "add"){
+        return a + b
+    }else{
+        return a - b
+    }
 }
-
-const sayHello= (user: userType)=>{
-    console.log(`Hello ${user.age>50 ? "Sir" : "Mr."} ${user.name}`)
-}
+console.log(calculation(9, 6, "add"))

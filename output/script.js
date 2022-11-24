@@ -1,7 +1,12 @@
 "use strict";
-const userDetails = (id, user) => {
-    console.log(`user id is ${id}, name is ${user.name} and age is ${user.age}`);
+// function signature
+let calculation;
+calculation = (a, b, c) => {
+    if (c === "add") {
+        return a + b;
+    }
+    else {
+        return a - b;
+    }
 };
-const sayHello = (user) => {
-    console.log(`Hello ${user.age > 50 ? "Sir" : "Mr."} ${user.name}`);
-};
+console.log(calculation(9, 6, "add"));
